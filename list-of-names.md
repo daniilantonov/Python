@@ -12,10 +12,10 @@ for _ in range(number):
     random_nation = random.choice(nationals) 
     if state_random == 'male':
         random_name = random.choice(man_name)
-        
+
     else : 
         random_name = random.choice(woman_name)
-    
+
     random_user = dict(
         name = random_name ,
         age = age,
