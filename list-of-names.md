@@ -2,25 +2,22 @@ import random
 number = int(input('Numbers of user  >> '))
 man_name = ['Dmitry', 'Artem','Slavik']
 woman_name = ['Katerina','Diana','Anna']
-age_min , age_max = 10, 50 
 nationals = ['European','Asian']
 state = ['female','male']
 
-for _ in range(number):
-    age = random.randint(age_min , age_max)
+user_list=[]
+
+for i in range(number):
+    user = dict(state='',name= '',age='',nationals='')
     state_random = random.choice(state)
-    random_nation = random.choice(nationals) 
     if state_random == 'male':
-        random_name = random.choice(man_name)
+        name_random = random.choice(man_name)
+    else:
+        name_random = random.choice(woman_name)
+    user['state'] = state_random
+    user['name'] = name_random
+    user['age'] = str(random.randint(10,50))
+    user['nationals'] = random.choice(nationals)
 
-    else : 
-        random_name = random.choice(woman_name)
-
-    random_user = dict(
-        name = random_name ,
-        age = age,
-        nationals =  random_nation,
-        state = state_random,
-
-        )
-    print(random_user)
+    user_list.append(user)
+print(user_list)
