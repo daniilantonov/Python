@@ -1,23 +1,19 @@
-def read_grades(file_name):
-    with open(file_name, 'r', encoding='utf-8') as file:
-        dict = {}
-        grades_dict = {}
+def input_file(file_):
+    with open(file_, 'r', encoding='utf-8') as file:
+        dct = {}
         for line in file:
-            name,value  = line.split(',')
-            dict[name] = dict.get(name, []) + [int(value.rstrip('\n'))]
-            if name not in grades_dict:
-                grades_dict[name] = []
-            else:
-                grades_dict[name].append()
-        return grades_dict
+            name, value = line.split(',')
+            dct[name] = dct.get(name, []) + [int(value.rstrip('\n'))]
 
-def write_stats(grades_dict, output_file):
-    with open(output_file, 'w') as f:
-        for name, grades in grades_dict.items():
-            min_grade = min(grades)
-            max_grade = max(grades)
-            avg_grade = sum(grades) / len(grades)
-            f.write(f"{name},{min_grade},{avg_grade:.2f},{max_grade}\n")
+    return dct
 
-grades_dict = read_grades('input.txt')
-write_stats(grades_dict, 'output.txt')
+def output_file(dct):
+    for key, value in dct.items():
+        mini = min(value)
+        sred = sum(value) / len(value)
+        maxi = max(value)
+        with open('output.txt', 'a+', encoding='utf-8') as file:
+            file.write(f'{key}-{mini}, {sred}, {maxi} \n')
+
+
+output_file(input_file('input.txt'))
