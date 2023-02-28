@@ -1,19 +1,19 @@
-def input_file(file_):
-    with open(file_, 'r', encoding='utf-8') as file:
-        dct = {}
+def reading_data(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        dict = {}
         for line in file:
             name, value = line.split(',')
-            dct[name] = dct.get(name, []) + [int(value.rstrip('\n'))]
+            dict[name] = dict.get(name, []) + [int(value.rstrip('\n'))]
 
-    return dct
+    return dict
 
-def output_file(dct):
-    for key, value in dct.items():
+def save_result(dict):
+    for key, value in dict.items():
         mini = min(value)
         sred = sum(value) / len(value)
         maxi = max(value)
-        with open('output.txt', 'a+', encoding='utf-8') as file:
+    with open('output.txt', 'a+', encoding='utf-8') as file:
             file.write(f'{key}-{mini}, {sred}, {maxi} \n')
 
 
-output_file(input_file('input.txt'))
+save_result(reading_data('input.txt'))
