@@ -16,4 +16,8 @@ def save_result(my_dict):
             file.write(f'{key}-{mini}, {average}, {maxi}\n')
             
             
+<<<<<<< HEAD
 save_result(reading_data('input.txt'))
+=======
+save_result(reading_data('input.txt'))
+>>>>>>> 5605cacc0bec369d34e9e13b95043d98af26af6c
