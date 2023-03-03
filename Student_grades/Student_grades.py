@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-def reading_data(file_path):
+def reading_student_grades(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         student_grades = defaultdict(list)
         for line in file:
@@ -12,12 +12,14 @@ def reading_data(file_path):
             student_grades[name].append(grade)
     return student_grades
 
-def save_result(result):
+def save_accumulated_grades(student_grades , file_name):
     with open('output.txt', 'w', encoding='utf-8') as file:
-        for student_name, grades in result.items():
+        for student_name, grades in student_grades.items():
             min_grade = min(grades)
             average_grade = sum(grades) / len(grades)
             max_grade = max(grades)
-            file.write(f'{student_name}:{min_grade}, {average_grade}, {max_grade}\n')
+            file.write(f'{student_name}:{min_grade}, {average_grade:.2f}, {max_grade}\n')
             
-save_result(reading_data('input.txt'))
+
+student_grades = reading_student_grades('input.txt')
+save_accumulated_grades(student_grades , 'output.txt')
