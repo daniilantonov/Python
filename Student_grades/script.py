@@ -25,4 +25,3 @@ def save_accumulated_grades(student_grades, file_name):
             average_grade = sum(grades) / len(grades)
             max_grade = max(grades)
             file.write(f'{student_name}:{min_grade:.2f}, {average_grade:.2f}, {max_grade:.2f}\n')
-        
