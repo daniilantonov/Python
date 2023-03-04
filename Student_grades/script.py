@@ -1,6 +1,7 @@
 import csv
 from collections import defaultdict
 
+
 def reading_student_grades(file_path):
     with open(file_path, 'r', newline='', encoding='utf-8') as csv_file:
         student_grades = defaultdict(list)
