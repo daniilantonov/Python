@@ -1,10 +1,10 @@
-student_name grade
-Igor 10
-Alex 8
-Ira 9
-Kate 6
-Jon 9
-Ira 21
-Igor 15
-Jon 3
-Kate 13
+student_name,grade
+Igor,10
+Alex,8
+Ira,9
+Kate,6
+Jon,9
+Ira,21
+Igor,15
+Jon,3
+Kate,13
