@@ -1,4 +1,4 @@
-import functions
+import Python.Student_grades.functions as functions
 
 
 student_grades = functions.reading_student_grades('grades.csv')
