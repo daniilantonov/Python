@@ -1,5 +1,5 @@
-import script
+import homework
 
 
-student_grades=script.reading_student_grades('grades.csv')
-script.save_accumulated_grades(student_grades,'output.csv')
+student_grades=homework.reading_student_grades('grades.csv')
+homework.save_accumulated_grades(student_grades,'output.csv')
