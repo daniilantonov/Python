@@ -1,5 +1,6 @@
 import csv 
 
+
 class Student:
     def __init__(self, name, grades):
         self.name = name
