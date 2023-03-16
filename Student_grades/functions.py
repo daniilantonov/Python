@@ -1,5 +1,5 @@
 import csv
-from Python.Student_grades.student import Student
+from student import Student
 
 
 def reading_student_grades(file_path):

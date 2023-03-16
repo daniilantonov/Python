@@ -1,5 +1,5 @@
-import homework
+import functions
 
 
-students = homework.reading_student_grades('grades.csv')
-homework.save_accumulated_grades('output.csv', students)
+students = functions.reading_student_grades('grades.csv')
+functions.save_accumulated_grades('output.csv', students)
