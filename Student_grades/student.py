@@ -1,6 +1,3 @@
-import csv 
-
-
 class Student:
     def __init__(self, name, grades):
         self.name = name
@@ -29,3 +26,4 @@ class Student:
 
     def get_num_grades(self):
         return len(self.grades)
+        
