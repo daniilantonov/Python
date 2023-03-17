@@ -2,13 +2,7 @@ class Student:
     def __init__(self, name, grades):
         self.name = name
         self.grades = grades
-
-    def set_name(self, name):
-        self.name = name
-
-    def set_grades(self, grades):
-        self.grades = grades
-
+        
     def get_name(self):
         return self.name
 
