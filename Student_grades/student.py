@@ -1,22 +1,17 @@
 class People:
     def __init__(self, name):
         self.name = name
-    
-    def print_info(self):
-        print("Name:", self.name)
+
+    def get_name(self):
+        return self.name
 
 class Student(People):
     def __init__(self, name, grades):
         super().__init__(name)
         self.grades = grades
-        
-    def print_info(self):
-        super().print_info()
-        print("Grades:", self.grades)
-        print("Max grade:", self.get_max_grade())
-        print("Min grade:", self.get_min_grade())
-        print("Avg grade:", self.get_avg_grade())
-        print("Number of grades:", self.get_num_grades())
+
+    def get_grades(self):
+        return self.grades
 
     def get_max_grade(self):
         return max(self.grades)
@@ -29,4 +24,5 @@ class Student(People):
 
     def get_num_grades(self):
         return len(self.grades)
+
        
