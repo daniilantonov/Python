@@ -6,7 +6,7 @@ class People:
         return self.name
 
     def print_info(self):
-        print(f"Name: {self.name}")
+        print(f"Name: {self.get_name()}")
 
 class Student:
     def __init__(self, name, grades):
