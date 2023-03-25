@@ -8,9 +8,9 @@ class People:
     def print_info(self):
         print(f"Name: {self.get_name()}")
 
-class Student:
+class Student(People):
     def __init__(self, name, grades):
-        self.name = name
+        super().__init__(name)
         self.grades = grades
         
     def get_grades(self):
@@ -35,3 +35,18 @@ class Student:
               f"Min grade: {self.get_min_grade()}\n"
               f"Average grade: {self.get_avg_grade()}\n"
               f"Number of grades: {self.get_num_grades()}")
+
+class Teacher:
+    def __init__(self, name, subject):
+        self.name = name
+        self.subject = subject
+        
+    def get_name(self):
+        return self.name
+    
+    def get_subject(self):
+        return self.subject
+    
+    def print_info(self):
+        print(f"Name: {self.get_name()}")
+        print(f"Subject: {self.get_subject()}")
