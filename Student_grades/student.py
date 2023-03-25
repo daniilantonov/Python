@@ -2,14 +2,16 @@ class People:
     def __init__(self, name):
         self.name = name
 
-    def print_info(self):
-        print(f"Name: {self.name}")
-
-class Student(People):
+    def get_name(self):
+        return self.name
+class Student:
     def __init__(self, name, grades):
-        super().__init__(name)
+        self.name = name
         self.grades = grades
         
+    def get_name(self):
+        return self.name
+
     def get_grades(self):
         return self.grades
 
@@ -26,5 +28,11 @@ class Student(People):
         return len(self.grades)
 
     def print_info(self):
-        print(f"Name: {self.name}, Grades: {self.grades}")
+        print(f"Student name: {self.get_name()}\n"
+              f"Grades: {self.get_grades()}\n"
+              f"Max grade: {self.get_max_grade()}\n"
+              f"Min grade: {self.get_min_grade()}\n"
+              f"Average grade: {self.get_avg_grade()}\n"
+              f"Number of grades: {self.get_num_grades()}")
+
       
