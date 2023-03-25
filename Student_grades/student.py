@@ -2,6 +2,9 @@ class People:
     def __init__(self, name):
         self.name = name
 
+    def get_name(self):
+        return self.name
+
     def print_info(self):
         print(f"Name: {self.name}")
 
@@ -10,9 +13,6 @@ class Student:
         self.name = name
         self.grades = grades
         
-    def get_name(self):
-        return self.name
-
     def get_grades(self):
         return self.grades
 
