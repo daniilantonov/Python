@@ -4,7 +4,10 @@ class People:
 
     def get_name(self):
         return self.name
-    
+
+    def print_info(self):
+        print(f"Name: {self.name}")
+
 class Student:
     def __init__(self, name, grades):
         self.name = name
@@ -35,5 +38,3 @@ class Student:
               f"Min grade: {self.get_min_grade()}\n"
               f"Average grade: {self.get_avg_grade()}\n"
               f"Number of grades: {self.get_num_grades()}")
-
-      
