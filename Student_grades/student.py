@@ -4,6 +4,7 @@ class People:
 
     def get_name(self):
         return self.name
+    
 class Student:
     def __init__(self, name, grades):
         self.name = name
