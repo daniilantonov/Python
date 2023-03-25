@@ -2,14 +2,14 @@ class People:
     def __init__(self, name):
         self.name = name
 
-    def get_name(self):
-        return self.name
+    def print_info(self):
+        print(f"Name: {self.name}")
 
 class Student(People):
     def __init__(self, name, grades):
         super().__init__(name)
         self.grades = grades
-
+        
     def get_grades(self):
         return self.grades
 
@@ -25,4 +25,6 @@ class Student(People):
     def get_num_grades(self):
         return len(self.grades)
 
-       
+    def print_info(self):
+        print(f"Name: {self.name}, Grades: {self.grades}")
+      
